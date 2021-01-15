@@ -14,7 +14,7 @@
 `driving_df = read_csv('filename.csv')`
 
 ### (3) Calculate session statistics
-`session_stats <- general_session_stats(driving_df, group_var=c(participant_id, session_date), lag_n = 10, sim="drivesafety", fps_assumption=NA)`
+`session_stats <- general_session_stats(driving_df, group_var=c(SubjectName), lag_n = 10, sim="drivesafety", fps_assumption=60)`
 
 ### (4) View the result table!
 `View(session_stats)`
