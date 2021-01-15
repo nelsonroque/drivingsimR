@@ -1,10 +1,11 @@
 #' drivingsimR: Automating the boring stuff, so you can calculate and later visualize what you care about.
 
 #' @name general_session_stats
+#' @import tidyverse
 #' @keywords driving, session summary, person summary
 #' @export
 general_session_stats <- function(.data, group_var, lag_n = 10, sim="drivesafety", fps_assumption=NA) {
-  if(!fps_assumption) {
+  if(!fps_assumption || is.na(fps_assumption)) {
     stop("Please enter parameter fps_assumption with value greater than or equal to 10 (as integer).")
   } else {
 
@@ -82,6 +83,7 @@ general_session_stats <- function(.data, group_var, lag_n = 10, sim="drivesafety
 
                 collision_events = paste0(unique(Collision))) %>%
       # create flags if certain critical data outliers exist -----
-      mutate(flag_session_0_0_origin = ifelse(min_vehicle_x == 0 & min_vehicle_y == 0, T, F))
+      mutate(flag_session_0_0_origin = ifelse(min_vehicle_x == 0 & min_vehicle_y == 0, T, F)) %>%
+      mutate(param_fps_assumption = fps_assumption)
   }
 }

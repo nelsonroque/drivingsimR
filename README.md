@@ -14,3 +14,8 @@
 
 ### (4) View the result table!
 `View(general_session_stats)`
+
+
+#### Sorry, at this time, the only supported driving simulator is DriveSafety. 
+
+Please email nelson.roque@ucf.edu if interested in seeing support for another driving simulator (e.g., sharing sample raw data, codebooks).
