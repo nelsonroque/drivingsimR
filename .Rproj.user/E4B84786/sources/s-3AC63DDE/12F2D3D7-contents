@@ -1,0 +1,25 @@
+library(devtools)
+
+# set script params
+DOCUMENT.FLAG = 1
+BUILD.FLAG = 1
+INSTALL.FLAG = 0
+
+# switch directories
+setwd("~/GitHub/drivingsimR")
+
+# document (if requested)
+if(DOCUMENT.FLAG){
+  roxygen2::roxygenise()
+}
+
+# install (if requested)
+if(INSTALL.FLAG){
+  setwd("..")
+  install("drivingsimR")
+}
+
+# build (if requested)
+if(BUILD.FLAG){
+  devtools::build()
+}
