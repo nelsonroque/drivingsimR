@@ -19,7 +19,6 @@
 ### (4) View the result table!
 `View(session_stats)`
 
+#### Sorry, at this time, the only supported driving simulator is DriveSafety. In the upcoming future, support will be available for the GE Patrol Sim, and the NADS MiniSim.
 
-#### Sorry, at this time, the only supported driving simulator is DriveSafety. 
-
-Please email nelson.roque@ucf.edu if interested in seeing support for another driving simulator (e.g., sharing sample raw data, codebooks).
+Please email nelson.roque@ucf.edu if interested in contributing or seeing support for another driving simulator (e.g., sharing sample raw data, codebooks).
